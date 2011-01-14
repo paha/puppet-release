@@ -1,0 +1,14 @@
+<div id="branch_list">
+  <% get_config.sort_by {|k,v| k}.each do |pop,tag|%>
+    <div class="row">
+      <div id="pops"><%= pop %></div>
+      <a href="https://puppetrepo.sea5.speakeasy.priv/viewvc/puppet/<%= tag %>" id="tag" >
+        <%= tag %>
+      </a>
+    </div>
+  <% end %>
+</div>
+
+<h4>
+  Upcoming tag: <%= gen_tag_name %>
+</h4>

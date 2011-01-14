@@ -1,0 +1,11 @@
+= Puppet-release. A web front end to release configuration managment code to Qa/prod.
+
+A Sinatra app, that allows to cut new tags, manage branches for each environment, veiw release notes and more.
+
+= Installing
+
+puppet::release class takes care of apache+passenger instalation and authentication. 
+Alternatevly it could be run using Daemons gem, the script is included.
+
+= TODO
+

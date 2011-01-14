@@ -1,0 +1,24 @@
+<div id="branch_list">
+  <p id="usage">
+    Release note are composed of commit comments since the last prod tag.
+  </p>
+  
+  <p style="border-bottom: 1px solid gray; padding-bottom: 12px">
+    <a href="https://puppetrepo.sea5.speakeasy.priv/viewvc/puppet/trunk" id="tag" >
+      See trunk with VIEWVC
+    </a>
+  </p>
+  
+  <% get_commit_log.reverse.each do |c| %>
+    <div class="row">
+      <div id="pops"><%= c.rev %></div>
+      <div id="tags" style="font-size: 12px"">
+        <%= c.date %>, <%= c.author %>:
+        <br>
+        <%= c.msg %>
+        <br><br>
+      </div>
+    </div>
+  <% end %>
+
+</div>

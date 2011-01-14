@@ -1,0 +1,12 @@
+<div id="branch_list">
+  <% last_tags.each do |tag| %>
+    <div class="row">
+      <a href="https://puppetrepo.sea5.speakeasy.priv/viewvc/puppet/tags/<%= tag %>" id="tag" >
+        <%= tag %>
+      </a>
+    </div>
+  <% end %>
+  
+</div>
+
+<h4>Upcoming tag: <%= gen_tag_name %></h4>

@@ -1,0 +1,18 @@
+<% tag_id = gen_tag_name %>
+<h3>Next tag should be: <%= tag_id %></h3>
+
+<p id="usage">
+After pressing "New Tag" button bellow a new tag will be created by coping trunk branch.
+<br>
+The new tag will not be assigned to any of the pop puppetmasters until you change configuration under "Release new".
+</p>
+
+<p>
+  <form method='post' action='/tags/new'>
+    Commit message:<br>
+    <textarea name="commit_msg" rows='10' cols="80"></textarea>
+    <br>
+    <input name='tag_id' value='<%= tag_id %>'>
+    <input type='submit' value='New Tag'>
+  </form>
+</p>

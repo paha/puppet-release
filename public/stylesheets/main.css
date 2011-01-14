@@ -1,0 +1,82 @@
+a {
+color: Black;
+text-decoration:none;
+}
+
+a:hover{
+color: Gray;
+}
+
+#page{
+width: 90%;
+margin: 10px auto;
+background-color: #fff;
+color: #333;
+line-height: 130%;
+}
+
+#header{
+padding: .5em;
+border-bottom: 1px solid gray;
+}
+
+#header h1{
+padding: 0;
+margin: 0;
+}
+
+#logo{
+padding: 0;
+margin-right: 30px;
+}
+
+#usage{
+font-size:      11px;
+font-family:    verdana;
+}
+
+#branch_list{
+font-size:      14px;
+font-family:    verdana;
+vertical-align: middle;
+}
+
+.row{
+padding: .03em;
+}
+
+.row:hover{
+border-top: 1px solid gray;
+border-bottom: 1px solid gray;
+}
+
+#pops{
+float: left;
+width: 10%;
+}
+
+#tags{
+margin-left: 100px;
+/* border-left: 1px solid gray; */
+margin-right: 100px;
+max-width: 60%;
+font-size:      14px;
+font-family:    verdana;
+}
+
+#footer{
+clear: both;
+border-top: 1px solid gray;
+padding: .5em;
+color: #333;
+font-size:      12px;
+font-family:    verdana;
+}
+
+.menuItem{
+margin-right: 5px;
+margin-left:10px;
+font-weight: bold;
+font-size: 12px;
+font-family:    verdana;
+}

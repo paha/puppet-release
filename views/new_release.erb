@@ -1,0 +1,37 @@
+<div id="branch_list">
+  
+  <% config_hash = get_config %>
+  <% my_branches = available_branches %>
+  <%# meta = Hash.new %>
+  
+  <% config_hash.keys.sort.each do |pop|%>  
+    <div id="pops">
+      <%= pop %>
+    </div>
+      
+    <form method='post' action='/release/new'> 
+    <select id="tags" name="<%= pop %>">
+      
+      <option selected name="<%= pop %>" value="<%= config_hash[pop] %>">
+        <%= config_hash[pop] %>
+      </option>
+      
+      <% my_branches.each do |branch| %>
+        <% next if branch == config_hash[pop] %>
+        <option value="<%= branch %>">
+          <%= branch %>
+        </option>
+      <% end %>
+      
+    </select>
+    <br>
+  <% end %>
+  <p id="usage">
+    The latest 3 tags: <% last_tags(3).each do |t| %><%= t %>, <% end %>
+  </p>
+  
+  <p>  
+    <input type='submit' value='New Release'>
+  </p>
+  </form>
+</div>
